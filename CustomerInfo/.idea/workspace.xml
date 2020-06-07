@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6a2a664b-a4fb-44e7-b7c8-92a0f14dd600" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1czcfyg3SuM4UxQNrVj9qhE7n3l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="CustomerInfo:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/CustomerInfo_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="CustomerInfo:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a2a664b-a4fb-44e7-b7c8-92a0f14dd600" name="Default Changelist" comment="" />
+      <created>1591534969491</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591534969491</updated>
+      <workItem from="1591534975463" duration="482000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="767" y="295" width="424" height="511" key="FileChooserDialogImpl" timestamp="1591535452637">
+      <screen x="59" y="27" width="1861" height="1053" />
+    </state>
+    <state x="767" y="295" width="424" height="511" key="FileChooserDialogImpl/59.27.1861.1053@59.27.1861.1053" timestamp="1591535452637" />
+    <state x="298" y="86" width="1372" height="932" key="new project wizard" timestamp="1591535455210">
+      <screen x="59" y="27" width="1861" height="1053" />
+    </state>
+    <state x="298" y="86" width="1372" height="932" key="new project wizard/59.27.1861.1053@59.27.1861.1053" timestamp="1591535455210" />
+  </component>
+</project>
