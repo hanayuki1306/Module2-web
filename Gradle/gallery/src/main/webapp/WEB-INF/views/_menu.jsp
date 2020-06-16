@@ -8,11 +8,11 @@
 
 </div>
 
-Chú ý: Trên các form để upload dữ liệu bạn cần có thuộc tính enctype="multipart/form-data".
+<%--Chú ý: Trên các form để upload dữ liệu bạn cần có thuộc tính enctype="multipart/form-data".--%>
 
 
 
-Tạo file uploadOneFile.jsp
+<%--Tạo file uploadOneFile.jsp--%>
 
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 

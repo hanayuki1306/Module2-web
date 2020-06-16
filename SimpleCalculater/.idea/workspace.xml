@@ -6,11 +6,28 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b05fde41-eca3-40db-a9f5-1a0cc1488a4d" name="Default Changelist" comment="" />
+    <list default="true" id="b05fde41-eca3-40db-a9f5-1a0cc1488a4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/src/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/src/CustomerInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/src/ShowInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simple_login/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../basic_dictionary/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerInfo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerInfo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerInfo/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerInfo/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple_login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple_login/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple_login/out/artifacts/Simple_login_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple_login/out/artifacts/Simple_login_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple_login/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple_login/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic_dictionary/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../basic_dictionary/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -20,6 +37,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1czdf2LePIcUcuYkSnjOkP6YVKm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -117,11 +137,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -140,6 +155,8 @@
       <option name="presentableId" value="Default" />
       <updated>1591535455260</updated>
       <workItem from="1591535459064" duration="3688000" />
+      <workItem from="1591581550895" duration="599000" />
+      <workItem from="1591588181431" duration="856000" />
     </task>
     <servers />
   </component>

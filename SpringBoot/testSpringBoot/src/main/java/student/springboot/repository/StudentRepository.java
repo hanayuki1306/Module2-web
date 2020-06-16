@@ -1,4 +1,6 @@
 package student.springboot.repository;
 
-public interface StudentRepository {
+
+import student.springboot.models.Student;
+public interface StudentRepository extends Repository<Student> {
 }

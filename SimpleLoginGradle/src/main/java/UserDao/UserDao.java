@@ -1,4 +1,4 @@
-package Dao.UserDao;
+package UserDao;
 
 import model.Login;
 import model.User;

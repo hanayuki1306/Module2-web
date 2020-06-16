@@ -1,28 +1,17 @@
 package model;
-
 public class User {
+    private String account;
+    private String password;
     private String name;
-    private  String password;
-    private String image;
-    private int old;
-    private String address;
-    public User() {
+    private String email;
+    private int age;
+
+    public String getAccount() {
+        return account;
     }
 
-    public User(String name, String password, String image, int old, String address) {
-        this.name = name;
-        this.password = password;
-        this.image = image;
-        this.old = old;
-        this.address = address;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public String getPassword() {
@@ -33,27 +22,27 @@ public class User {
         this.password = password;
     }
 
-    public String getImage() {
-        return image;
+    public String getName() {
+        return name;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getOld() {
-        return old;
+    public String getEmail() {
+        return email;
     }
 
-    public void setOld(int old) {
-        this.old = old;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getAddress() {
-        return address;
+    public int getAge() {
+        return age;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAge(int age) {
+        this.age = age;
     }
 }

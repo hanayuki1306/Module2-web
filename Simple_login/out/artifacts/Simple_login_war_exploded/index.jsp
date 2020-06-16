@@ -27,6 +27,8 @@
     <input type="text" name="username" size="20"  placeholder="username" />
     <input type="password" name="password" size="20" placeholder="password" />
     <input type="submit" value="Sign in"/>
+    <% int a =3;%>
+    <%! int b = 3;%>
   </div>
 </form>
 </body>

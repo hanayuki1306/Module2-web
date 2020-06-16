@@ -6,11 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1dfa738-3d5a-4092-85b6-f07f423eeda0" name="Default Changelist" comment="" />
+    <list default="true" id="e1dfa738-3d5a-4092-85b6-f07f423eeda0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/.idea/libraries/taglibs_standard_spec_1_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/src/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/src/CustomerInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CustomerInfo/src/ShowInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Simple_login/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerInfo/.idea/artifacts/CustomerInfo_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerInfo/.idea/artifacts/CustomerInfo_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerInfo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerInfo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerInfo/CustomerInfo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerInfo/CustomerInfo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CustomerInfo/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../CustomerInfo/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SimpleCalculater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SimpleCalculater/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple_login/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple_login/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple_login/out/artifacts/Simple_login_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple_login/out/artifacts/Simple_login_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple_login/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Simple_login/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -20,6 +40,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1czIWZCPcxuah2VoRWgd6Q3fOWc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -127,6 +148,8 @@
       <updated>1591525026185</updated>
       <workItem from="1591525032974" duration="5801000" />
       <workItem from="1591531368383" duration="10000" />
+      <workItem from="1591588566377" duration="389000" />
+      <workItem from="1591589180384" duration="658000" />
     </task>
     <servers />
   </component>

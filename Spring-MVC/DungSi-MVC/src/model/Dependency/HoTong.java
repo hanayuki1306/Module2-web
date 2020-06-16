@@ -8,6 +8,9 @@ public class HoTong implements NhiemVu {
         this.stream = stream;
     }
 
+    public HoTong() {
+    }
+
     @Override
     public String thuchien() {
         return "Dung si Nao to Ho tong cong chua ";

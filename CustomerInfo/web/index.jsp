@@ -9,9 +9,26 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>CustomerInfo</title>
   </head>
   <body>
-  $END$
+  <form method="get" action ="/infoCustomer">
+    <h1> Danh sách khách hàng </h1>
+    <br>
+    <input type="submit" name="Detail" value="ClickToShowDetail">
+    <table>
+      <tr>
+        <th>Tên</th>
+        <th>Tuổi</th>
+        <th>Địa Chỉ</th>
+        <th>Hình ảnh</th>
+      </tr>
+      <tr>
+        <th>c: ${}</th>
+      </tr>
+    </table>
+  </form>
+
+
   </body>
 </html>

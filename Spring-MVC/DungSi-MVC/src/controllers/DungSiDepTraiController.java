@@ -1,10 +1,17 @@
 package controllers;
 
+import model.No_Dependency.DungSiDepTrai;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class DungSiDepTraiController {
-    @GetMapping
-    
+    @GetMapping("/dungsideptrai")
+    public String DungSiHanhDong(ModelMap model) {
+        DungSiDepTrai dungSiDepTrai = new DungSiDepTrai();
+        String ketqua = dungSiDepTrai.thucHienNhiemVu();
+        model.addAttribute("ketqua",ketqua);
+        return "DungSiDepTrai";
+    }
 }
