@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit province</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+<h1 class="text-primary">Edit User</h1>
+<p>
+    <a href="/show_all_User">List Users</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>`
+<form class="form-group" th:action="@{/edit-user}" th:object="${user}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table class="table">
+        <tr>
+            <td class="text-secondary">Edit Name</td>
+            <td><input class="form-control" type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td class="text-secondary">Edit age</td>
+            <td><input class="form-control" type="text" th:field="*{age}"/></td>
+        </tr>
+        <tr>
+            <td class="text-secondary">Edit account name</td>
+            <td><input class="form-control" type="text" th:field="*{account}"/></td>
+        </tr>
+        <tr>
+            <td class="text-secondary"> Edit permission</td>
+            <td><input class="form-control" type="text" th:field="*{permission}"/></td>
+        </tr>
+        <tr>
+            <td class="text-secondary">Edit password</td>
+            <td><input class="form-control" type="text" th:field="*{password}"/></td>
+        </tr>
+
+        <td> <button class="btn btn-primary" type="submit" value="Update user">Update user</button> </td>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<style type='text/css'>
+    label {
+        display: block;
+        text-align: left;
+        width: 100px;
+    }
+</style>
+<body>
+
+<div class="container">
+    <h1> This is login page</h1>
+
+    <form th:action="@{/checklogin}" th:object="${login}" method="post">
+    <label class="btn btn-primary" for="user" >User</label>
+    <input type="text" name="user" placeholder="Enter User name" id="user"  th:field="*{account}">
+    <br>
+    <label class="btn btn-primary" for="password"> Password</label>
+    <input type="text" name="password" placeholder="Enter Password" id="password" th:field="*{password}">
+    <br>
+    <input  class="btn btn-primary" type="submit" value="Login">
+    </form>
+</div>
+
+</body>
+</html>

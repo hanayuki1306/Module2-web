@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CreateUser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<h2 class="text-primary">Create User Page</h2>
+
+<body>
+    <style type='text/css'>
+        label {
+            display: inline-block;
+            width: 130px;
+            text-align: left;
+        }​
+    </style>
+
+    <form th:action="@{/create_user}" th:object="${newUser}" th:method="post">
+        <input th:type="hidden" name="id" th:field="*{id}">
+        <label class="text-secondary" for="name" >Name</label>
+        <input  type="text" id="name" placeholder="Input name here" th:field="*{name}">
+        <br>
+        <label class="text-secondary" for="age">Age</label>
+        <input type="text" id="age" placeholder="Input age here" th:field="*{age}">
+        <br>
+        <label class="text-secondary" for="account">User Account  </label>
+        <input type="text" id="account" placeholder="Input ur name Account here" th:field="*{account}">
+        <br>
+        <label class="text-secondary" for="password">User Password</label>e
+        <input type="text" id="password" placeholder="Input ur Password here" th:field="*{password}">
+        <br>
+        <label class="text-secondary" for="confirm_password">User Password</label>
+        <input type="text" id="confirm_password" placeholder="ConfirmPassword">
+        <br>
+        <button class="btn btn-primary" type="submit"> Create User </button>
+    </form>
+
+</body>
+</html>
