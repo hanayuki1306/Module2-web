@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sonproject.sonblog.model.User.Login;
 import sonproject.sonblog.model.User.User;
+import sonproject.sonblog.model.User.UserDTO;
 import sonproject.sonblog.repository.UserRepository;
 import sonproject.sonblog.service.UserService;
 
@@ -27,8 +28,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void save(User user) {
-        userRepository.save(user);
+    public void save(UserDTO userDTO) {
+//        userRepository.save()
+      if (userDTO.getPassword().equals(userDTO.getConfirmPassword())){
+            User user = new User();
+            user.setName(userDTO.getName());
+            user.setAge(userDTO.getAge());
+            user.setAccount(userDTO.getAccount());
+            user.setPassword(userDTO.getPassword());
+            userRepository.save(user);
+      }
+
     }
 
     @Override

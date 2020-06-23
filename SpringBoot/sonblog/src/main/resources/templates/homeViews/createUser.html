@@ -30,11 +30,11 @@
         <label class="text-secondary" for="account">User Account  </label>
         <input type="text" id="account" placeholder="Input ur name Account here" th:field="*{account}">
         <br>
-        <label class="text-secondary" for="password">User Password</label>e
+        <label class="text-secondary" for="password">User Password</label>
         <input type="text" id="password" placeholder="Input ur Password here" th:field="*{password}">
         <br>
-        <label class="text-secondary" for="confirm_password">User Password</label>
-        <input type="text" id="confirm_password" placeholder="ConfirmPassword">
+        <label class="text-secondary" for="confirm_password">Confirm Password</label>
+        <input type="text" id="confirm_password" placeholder="Confirm Password" th:field="*{confirmPassword}">
         <br>
         <button class="btn btn-primary" type="submit"> Create User </button>
     </form>

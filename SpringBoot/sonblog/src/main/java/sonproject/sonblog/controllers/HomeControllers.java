@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import sonproject.sonblog.model.User.Login;
 import sonproject.sonblog.model.User.User;
+import sonproject.sonblog.model.User.UserDTO;
 import sonproject.sonblog.service.UserService;
 
 import java.util.Optional;
@@ -50,7 +51,7 @@ public class HomeControllers {
         return modelAndView;
     }
     @PostMapping("/edit-user")
-    public ModelAndView updateUser(@ModelAttribute("user") User user){
+    public ModelAndView updateUser(@ModelAttribute("user") UserDTO user){
         userService.save(user);
         ModelAndView modelAndView = new ModelAndView("homeViews/editUser");
         modelAndView.addObject("user", user);
@@ -67,11 +68,11 @@ public class HomeControllers {
     @GetMapping("/create_user")
     public  ModelAndView createPage(){
         ModelAndView modelAndView  = new ModelAndView("/homeViews/createUser");
-        modelAndView.addObject("newUser",new User());
+        modelAndView.addObject("newUser",new UserDTO());
         return modelAndView;
     }
     @PostMapping("/create_user")
-    public ModelAndView successCreatePage(@ModelAttribute("newUser") User user){
+        public ModelAndView successCreatePage(@ModelAttribute("newUser") UserDTO user){
         userService.save(user);
         ModelAndView modelAndView = new ModelAndView("/homeViews/listUser","message","Created successfully!!");
         modelAndView.addObject("listUser", userService.findAll());
