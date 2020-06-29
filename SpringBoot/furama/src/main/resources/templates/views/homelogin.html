@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Login-Form</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div class="loginbox">
+       <img th:src="@{wallpaper/userlogo.png}" class="avatar"/>
+        <h1> Login here</h1>
+        <form th:action="@{/login}" th:object="${loginObj}" th:method="POST">
+            <p> Username</p>
+            <input type="text" name="" placeholder="Enter Username" th:field="*{account}">
+            <p> Password</p>
+            <input type="password" name="" placeholder="Enter Password" th:field="*{password}">
+            <input type="submit" name="" value="Login">
+
+            <th:block th:if="${message}">
+                <p th:text="${message}"></p>
+            </th:block>
+            <a href="#"> Lost your password ?</a>
+            <br>
+            <a href="#"> Dont't have an account</a>
+        </form>
+
+    </div>
+
+</body>
+</html>

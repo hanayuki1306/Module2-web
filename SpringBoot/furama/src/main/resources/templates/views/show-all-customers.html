@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show-All-Customers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+<h1> This is Customers Page</h1>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+
+<a href="/register" > Đăng ký khách hàng </a>
+<form th:action="@{/find-customer}" th:method="GET">
+<div>
+    <label for="search">Tìm theo tên</label>
+    <input id="search" type="text" name="findName">
+    <input type="submit">
+</div>
+</form>
+
+
+<table class="table" border="2" >
+    <tr>
+        <th class="text-secondary">ID</th>
+        <th class="text-secondary">Họ tên</th>
+        <th class="text-secondary">Ngày sinh</th>
+        <th class="text-secondary">Giới tính</th>
+        <th class="text-secondary">Số CMND</th>
+        <th class="text-secondary">SDT</th>
+        <th class="text-secondary">Email</th>
+        <th class="text-secondary">DiaChi</th>
+        <th class="text-secondary">Account</th>
+        <th class="text-secondary">Edit</th>
+        <th class="text-secondary">Delete</th>
+
+
+    </tr>
+    <th:block th:each="customer: ${customersList}">
+        <tr>
+            <td th:text="${customer.getIDKhachHang()}"></td>
+            <td th:text="${customer.hoTen}"></td>
+            <td th:text="${customer.getDateborn()}"></td>
+            <td th:text="${customer.gioiTinh}"></td>
+            <td th:text="${customer.soCMND}"></td>
+            <td th:text="${customer.SDT}"></td>
+            <td th:text="${customer.email}"></td>
+            <td th:text="${customer.diaChi}"></td>
+            <td th:text="${customer.account.getAccount()}"></td>
+
+
+            <td><a th:href="@{/edit-customer/__${customer.IDKhachHang}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-customer/__${customer.IDKhachHang}__ }" onclick="return confirm('Are you sure?')">Delete</a></td>
+        </tr>
+    </th:block>
+
+
+
+</table>
+
+<div>
+    <a th:href="@{'/show-customers'(page=${customersList.number})}" th:if="${customersList.hasPrevious()}">Previous</a>
+    <span th:text="${customersList.number + 1}"></span>/<span th:text="${customersList.totalPages}"></span>
+    <a th:href="@{'/show-customers' (page=${customersList.number + 2})}" th:if="${customersList.hasNext()}">Next</a>
+</div>
+
+</body>
+</html>

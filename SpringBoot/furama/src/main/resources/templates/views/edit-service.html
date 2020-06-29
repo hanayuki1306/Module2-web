@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>edit-service</title>
+</head>
+<body>
+    <h2>edit-service page</h2>
+
+    <form th:action="@{/edit-service}" th:method="POST" th:object="${service}">
+        <input th:type="hidden" th:field="*{idDichVu}" name="id">
+        <div>
+            <label>Loại dịch vụ</label>
+            <br>
+            <input type="radio" id="villa" name="loaiDichVu" value="Villa">
+            <label for="villa">Villa</label><br>
+            <input type="radio" id="house" name="loaiDichVu" value="House">
+            <label for="House">House</label><br>
+            <input type="radio" id="Room" name="loaiDichVu" value="Room">
+            <label for="Room">Room</label>
+        </div>
+
+        <div>
+            <label>Tên Dịch Vụ</label>
+            <input type="text" th:field="*{tenDichVu}">
+        </div>
+
+        <div>
+            <label> Trạng thái</label>
+            <br>
+            <input type="radio" id="khadung"  name="trangThai" value="kha dung">
+            <label for="khadung">Khả dụng</label><br>
+
+            <input type="radio" id="khongkhadung" name="trangThai" value="khong kha dung">
+            <label for="khongkhadung">Không khả dụng</label><br>
+
+        </div>
+
+        <div>
+            <label>Kiểu thuê</label>
+            <br>
+            <input type="radio" id="ngay" name="kieuThue" value="Ngày">
+            <label for="ngay">Ngày</label><br>
+            <input type="radio" id="thang" name="kieuThue" value="Tháng">
+            <label for="thang">Tháng</label><br>
+            <input type="radio" id="nam" name="kieuThue" value="Năm">
+            <label for="nam">Năm</label>
+        </div>
+
+        <div>
+            <label>Chi phí thuê</label>
+            <input type="number" th:field="*{chiPhiThue}">
+        </div>
+        <div>
+            <label>Diện tích</label>
+            <input type="number" th:field="*{dienTich}">
+        </div>
+        <div>
+            <label>Số tầng</label>
+            <input type="number" th:field="*{soTang}">
+        </div>
+
+        <input type="submit" value="Save">
+    </form>
+
+</body>
+</html>
