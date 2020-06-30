@@ -2,6 +2,9 @@ package codegym.furama.model.customer;
 
 
 import codegym.furama.model.contract.HopDong;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
 import java.text.SimpleDateFormat;
@@ -10,7 +13,7 @@ import java.util.Set;
 
 @Entity
 @Table(name="khachhang")
-public class Customer {
+public class Customer{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -145,5 +148,4 @@ public class Customer {
 
     public Customer() {
     }
-
 }

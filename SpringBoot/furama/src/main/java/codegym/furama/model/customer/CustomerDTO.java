@@ -1,8 +1,13 @@
 package codegym.furama.model.customer;
 
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
+
+import javax.validation.constraints.Pattern;
 import java.sql.Date;
 
-public class CustomerDTO {
+public class CustomerDTO implements Validator {
     private int idKhachHang;
     private String loaiKhach;
     private String hoTen;
@@ -104,5 +109,24 @@ public class CustomerDTO {
 
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
+    }
+
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return CustomerDTO.class.isAssignableFrom(clazz);
+    }
+
+//    @Pattern(regexp = "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")
+    @Override
+    public void validate(Object target, Errors errors) {
+        CustomerDTO customer = (CustomerDTO) target;
+        ValidationUtils.rejectIfEmpty(errors, "hoTen", "name.empty");
+        String account = customer.getAccount().getAccount();
+        if (account == ""){
+            errors.rejectValue("account","account.convert");
+        }
+
+
     }
 }

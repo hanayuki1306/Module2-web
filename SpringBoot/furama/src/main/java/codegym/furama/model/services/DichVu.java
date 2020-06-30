@@ -36,6 +36,20 @@ public class DichVu {
     // ngay gio thang nam
 
     @OneToMany(mappedBy = "dichVu")
+    private Set<ServiceQueue> serviceQueues;
+
+    @Column(name="isdelete")
+    private Boolean isDelete = false;
+
+    public Boolean getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Boolean delete) {
+        isDelete = delete;
+    }
+
+    @OneToMany(mappedBy = "dichVu")
     private Set<HopDong> hopDongs;
 
     public DichVu() {

@@ -22,6 +22,7 @@
             <div class="form-group">
                 <label >Account</label>
                 <input type="text" class="form-control" placeholder="Account" th:field ="*{account.account}">
+                <td th:if="${#fields.hasErrors('account')}" th:errors="*{account}"></td>
             </div>
             <div class="form-group">
                 <label>Password</label>
@@ -34,6 +35,7 @@
             <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" class="form-control" placeholder="Name" th:field = "*{hoTen}">
+                <td th:if="${#fields.hasErrors('hoTen')}" th:errors="*{hoTen}">Name Error</td>
             </div>
             <div class="form-group">
                 <label>Birth Day</label>
@@ -62,7 +64,7 @@
             </div>
             <div class="form-group" >
                 <label>Type Customer</label>
-                <select name="cars" class="custom-select" th:field ="*{loaiKhach}">
+                <select class="custom-select" th:field ="*{loaiKhach}">
                     <option value="" selected>Custom Select Option</option>
                     <option value="Diamond">Diamond</option>
                     <option value="Platinum">Platinum</option>

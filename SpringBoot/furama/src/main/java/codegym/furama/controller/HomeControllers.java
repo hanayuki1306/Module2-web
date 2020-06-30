@@ -5,6 +5,8 @@ import codegym.furama.model.customer.Login;
 import codegym.furama.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -41,7 +43,11 @@ public class HomeControllers {
         return modelAndView;
     }
     @PostMapping("/register")
-    public String saveCustomer(@ModelAttribute("customer") CustomerDTO customer, RedirectAttributes redirectAttributes){
+    public String saveCustomer(@Validated @ModelAttribute("customer") CustomerDTO customer, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+        new CustomerDTO().validate(customer,bindingResult);
+        if (bindingResult.hasFieldErrors()){
+            return "views/register";
+        }
         customerService.saveDTO(customer);
         redirectAttributes.addFlashAttribute("message","create success");
         return "redirect:/login";

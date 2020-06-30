@@ -59,6 +59,14 @@
             <label>Số tầng</label>
             <input type="number" th:field="*{soTang}">
         </div>
+        <div>
+            <label>Is delete</label>
+            <br>
+            <input type="radio" id="deleted" name="isDelete" value="True">
+            <label for="deleted">Deleted</label><br>
+            <input type="radio" id="notdelete" name="isDelete" value="False">
+            <label for="notdelete">On Working</label><br>
+        </div>
 
         <input type="submit" value="Save">
     </form>

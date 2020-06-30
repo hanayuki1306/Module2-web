@@ -1,8 +1,11 @@
 package codegym.furama.model.customer;
 
 import codegym.furama.model.customer.Customer;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name="account")
@@ -18,6 +21,7 @@ public class Account {
 
     @Column(name="account")
     String account;
+
 
     @Column(name= "password")
     String password;
@@ -56,4 +60,5 @@ public class Account {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

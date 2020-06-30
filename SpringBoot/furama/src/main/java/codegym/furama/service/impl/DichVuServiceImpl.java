@@ -33,6 +33,10 @@ public class DichVuServiceImpl implements DichVuSerVice {
 
     @Override
     public void remove(int id) {
-        dichVuRepository.deleteById(id);
+        Optional<DichVu> dichVu = dichVuRepository.findById(id);
+        if(dichVu.isPresent()){
+            dichVu.get().setIsDelete(true);
+            dichVuRepository.save(dichVu.get());
+        }
     }
 }

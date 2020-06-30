@@ -28,6 +28,7 @@ public class HopDong {
     private long tongTien;
 
 
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="idhopdongchitiet",referencedColumnName = "idhopdongchitiet")
     private HopDongChiTiet hopDongChiTiet;
@@ -40,8 +41,8 @@ public class HopDong {
 
     @ManyToOne
     @JoinColumn(name="iddichvu")
-//    nullable = false
     private DichVu dichVu;
+
 
 
     public Customer getCustomer() {
