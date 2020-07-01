@@ -6,7 +6,9 @@ import codegym.furama.model.customer.Login;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.List;
+
+import java.sql.Date;
+
 import java.util.Optional;
 
 public interface CustomerService {
@@ -18,6 +20,7 @@ public interface CustomerService {
     void save(Customer customer);
     void remove(int id);
     String checkLogin(Login login);
+    Page<Customer> findBy3Field(String name, String cmnd, Date birthday,Pageable pageable);
 
 
 }

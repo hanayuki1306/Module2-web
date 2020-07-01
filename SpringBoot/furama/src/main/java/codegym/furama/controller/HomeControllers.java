@@ -43,13 +43,13 @@ public class HomeControllers {
         return modelAndView;
     }
     @PostMapping("/register")
-    public String saveCustomer(@Validated @ModelAttribute("customer") CustomerDTO customer, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+    public String saveCustomer(@Validated @ModelAttribute("customer") CustomerDTO customer, BindingResult bindingResult, RedirectAttributes redirect){
         new CustomerDTO().validate(customer,bindingResult);
         if (bindingResult.hasFieldErrors()){
             return "views/register";
         }
         customerService.saveDTO(customer);
-        redirectAttributes.addFlashAttribute("message","create success");
+        redirect.addFlashAttribute("message","create success");
         return "redirect:/login";
     }
 }

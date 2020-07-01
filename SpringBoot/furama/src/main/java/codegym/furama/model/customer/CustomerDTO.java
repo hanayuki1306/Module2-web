@@ -4,6 +4,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 import java.sql.Date;
 
@@ -13,8 +14,15 @@ public class CustomerDTO implements Validator {
     private String hoTen;
     private Date ngaySinh;
     private String gioiTinh;
+
     private String soCMND;
+
+    @Pattern(regexp = "(^(\\+)(84)(\\s)(9|1[2|6|8|9])+([0-9]{8}))$" , message = "must follow +84 9XXXXXXXXor +84 1XXXXXXXXX")
     private String SDT;
+
+
+
+    @Email
     private String email;
     private String diaChi;
     private Account account;
@@ -117,7 +125,6 @@ public class CustomerDTO implements Validator {
         return CustomerDTO.class.isAssignableFrom(clazz);
     }
 
-//    @Pattern(regexp = "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$")
     @Override
     public void validate(Object target, Errors errors) {
         CustomerDTO customer = (CustomerDTO) target;
@@ -127,6 +134,10 @@ public class CustomerDTO implements Validator {
             errors.rejectValue("account","account.convert");
         }
 
+        String accountPattern = "^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$";
 
+        if (!account.matches(accountPattern)){
+            errors.rejectValue("account","account.wrongtype");
+        }
     }
 }

@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.sql.Date;
 import java.util.Optional;
 
 @Controller
@@ -67,8 +68,14 @@ public class CustomerControllers {
 
 
     @GetMapping("/find-customer")
-    public ModelAndView pageCustomer(@RequestParam(name="findName")String name,Pageable pageable){
-        Page<Customer> customers = customerService.findByName(name,pageable);
+    public ModelAndView pageCustomer(@RequestParam(name="findName",defaultValue = "") String name,
+                                     @RequestParam(name="CMND",defaultValue = "") String CMND,
+                                     @RequestParam(name="birthday",required = false) Date birthday,
+                                     Pageable pageable) {
+
+//        Page<Customer> customers = customerService.findByName(name,pageable);
+//        ModelAndView modelAndView = new ModelAndView("views/show-all-customers","customersList",customers);
+        Page<Customer> customers = customerService.findBy3Field(name,CMND,birthday,pageable);
         ModelAndView modelAndView = new ModelAndView("views/show-all-customers","customersList",customers);
         return  modelAndView;
     };

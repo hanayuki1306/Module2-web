@@ -13,6 +13,7 @@ public class DichVu {
     @Column(name="iddichvu")
     private int idDichVu;
 
+    
     @Column(name="tendichvu")
     private String tenDichVu;
 

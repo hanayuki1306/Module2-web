@@ -22,6 +22,21 @@
 </div>
 </form>
 
+<form th:action="@{/find-customer}" th:method="GET" >
+    <div>
+        <label for="search3"> Tìm theo tên </label>
+        <input id="search3" type="text" name="findName">
+        <label for="search4"> Tìm theo CMND </label>
+        <input id="search4" type="text" name="CMND">
+        <label for="search5"> Tìm theo ngày sinh </label>
+        <input id="search5" type="date" name="birthday" value="1111-12-12">
+        <input type="submit">
+
+    </div>
+
+
+</form>
+
 
 <table class="table" border="2" >
     <tr>

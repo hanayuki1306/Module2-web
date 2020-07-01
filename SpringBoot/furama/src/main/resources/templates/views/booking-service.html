@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Booking service</title>
+    <link rel="stylesheet" type="text/css" href="/bootrap/bootstrap/css/bootstrap.css">
 </head>
 <body>
-    <h2> Đăng ký sử dụng dịch vụ</h2>
+    <h2 class="text-info"> Đăng ký sử dụng dịch vụ</h2>
 
     <form th:action="@{/booking-service}" th:object="${servicequeue}" th:method="POST" >
         <div>
-            <label>Loại dịch vụ</label>
+            <label class="col-form-label"><h2 class="text-secondary">Loại dịch vụ</h2></label>
             <br>
             <input type="radio" id="villa" name="loaiDichVu" value="Villa">
             <label for="villa">Villa</label><br>
